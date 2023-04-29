@@ -37,7 +37,7 @@ const News = ()=> {
         let data = await response.json();
         setItems(data.articles);
         setLoading(false)
-        console.log('i am running')
+       
     }
     useEffect(() => {
     getNews()
