@@ -1,4 +1,4 @@
-import { title } from 'process';
+import Image from 'next/image';
 import React from 'react'
 import { Badge } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
@@ -19,6 +19,7 @@ import Modal from 'react-bootstrap/Modal';
     }
 function NewsItem({imgUrl,title,desc,pub,link,source,text}:NewsItemProp) {
     const [lgShow, setLgShow] = useState(false);
+    const more:string="... ";
   return (
     <Card style={{ width: '18rem' }} className='my-2'>
       <Card.Img variant="top" src={imgUrl}  alt='NewsApp'/>
@@ -28,9 +29,9 @@ function NewsItem({imgUrl,title,desc,pub,link,source,text}:NewsItemProp) {
         <Card.Text>
           {desc}
         </Card.Text>
-        <Button variant="dark"><a href={link} target='blank'>Read full article</a></Button> 
+        <Button variant="outline-dark"><a href={link} target='blank'>Read full article</a></Button> 
         <div className='my-1'>
-      <Button  variant="dark" onClick={() => setLgShow(true)}>Read more</Button>
+      <Button  variant="outline-dark" onClick={() => setLgShow(true)}>Read more</Button>
       <Modal
         size="lg"
         show={lgShow}
@@ -47,7 +48,7 @@ function NewsItem({imgUrl,title,desc,pub,link,source,text}:NewsItemProp) {
         <Card.Img variant="top" src={imgUrl} />
         <Card.Body>
           <Card.Text>
-          {!text?(desc):(text)} <br/>
+          {desc}<br/> {more}{text} <br/>
           <a href={link} target='blank'>Read full article at {source}</a>
           </Card.Text>
         </Card.Body>

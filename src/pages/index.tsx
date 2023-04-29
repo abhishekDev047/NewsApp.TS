@@ -1,6 +1,5 @@
 import Head from "next/head";
 import News from "./components/News";
-
 export default function Home() {
   return (
     <>
@@ -11,9 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container">
-        <div>
-          <News/>
-        </div>
+        <News/>
       </div>
     </>
   );
