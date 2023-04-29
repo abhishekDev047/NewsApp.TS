@@ -30,9 +30,9 @@ const News = () => {
     }, [category])
     
   return (
-    <div>
+    <div className='d-flex justify-content-around flex-wrap'>
         {items.map((item:item,index:number)=>(
-            <NewsItem key={index} imgUrl={item.urlToImage} title={item.title} desc={item.description} pub={item.publishedAt} link={item.url} source={item.source.name}/>
+            <NewsItem key={index} imgUrl={item.urlToImage} title={item.title} desc={item.description} pub={item.publishedAt} link={item.url} source={item.source.name} text={item.content}/>
         ))}
         
     </div>
