@@ -29,8 +29,10 @@ const News = ()=> {
     const [items, setItems] = useState<item[]>([])
     const [isLoading, setLoading] = useState(true)
     const getNews = async()=>{
+      let key1:string= '2e35f49b697b4944b5fef967dac23f05';
+      let key2:string= '8d353b32aba04f6b80823ec9f45871a1';
         setLoading(true);
-        let url:string= `https://newsapi.org/v2/top-headlines?category=${category}&country=${country}&apiKey=2e35f49b697b4944b5fef967dac23f05`;
+        let url:string= `https://newsapi.org/v2/top-headlines?category=${category}&country=${country}&apiKey=${key2}`;
         let response = await fetch(url);
         let data = await response.json();
         setItems(data.articles);
