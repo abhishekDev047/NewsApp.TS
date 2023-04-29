@@ -93,7 +93,7 @@ const News = ()=> {
       </Container>
     </Navbar>
 
-    <div className='container pt-4 mt-5'> <h3>Top Headlines for "{category.toUpperCase()}" <i>{country}</i></h3>
+    <div className='container pt-4 mt-5'> <h3>Top Headlines for {category.toUpperCase()} <i>{country}</i></h3>
  
     <hr/>
     </div>
